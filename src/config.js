@@ -6,4 +6,4 @@
 export const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw-RXPXwYYYzuTqGBBdmmo36sIlTGgMvIn9PSd-4T5dElzG83CiKd_k8u1KtWacl-KbuA/exec";
 
 // 첫 화면에 보이는 제목
-export const SITE_TITLE = "우리 반 퀴즈 게임";
+export const SITE_TITLE = "유나 선생님의 퀴즈 게임";
