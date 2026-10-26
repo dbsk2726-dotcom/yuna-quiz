@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import OnePunchQuiz from './games/OnePunchQuiz.jsx';
 import MarioQuiz from './games/MarioQuiz.jsx';
 import BattleQuiz from './games/BattleQuiz.jsx';
+import Galaxy from './Galaxy.jsx';
 import { GOOGLE_SCRIPT_URL, SITE_TITLE } from './config.js';
 
 // 주소 뒤의 #onepunch, #mario, #battle 로 게임을 고릅니다.
@@ -35,7 +36,9 @@ export default function App() {
   const notConfigured = !GOOGLE_SCRIPT_URL.startsWith('https://script.google.com/');
 
   return (
-    <div className="min-h-screen bg-gray-950 text-white flex flex-col items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-b from-gray-950 via-indigo-950 to-gray-950 text-white flex flex-col items-center justify-center p-4">
+      <Galaxy />
+      <div className="relative z-10 w-full flex flex-col items-center">
       <h1 className="text-3xl md:text-5xl font-black mb-2 text-center">{SITE_TITLE}</h1>
       <p className="text-gray-400 mb-8 text-center">플레이할 게임을 고르세요</p>
 
@@ -57,6 +60,7 @@ export default function App() {
             <div className="text-sm opacity-90">{g.desc}</div>
           </a>
         ))}
+      </div>
       </div>
     </div>
   );
